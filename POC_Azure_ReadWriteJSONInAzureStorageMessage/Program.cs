@@ -7,6 +7,8 @@ namespace POC_Azure_ReadWriteJSONInAzureStorageMessage
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Console.ReadLine();
         }
     }
 }
