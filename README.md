@@ -6,13 +6,13 @@ This is .net core console application talking to Azure message queue having json
 
 this will do below thing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 1. take azure connection string from application configuration
 2. connect to azure queue
 3. read/get,  write/save json string in/from azure queue
 
 
 Nuget packages required:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Microsoft.WindowsAzure.Storage
 Newtonsoft.Json
 
