@@ -9,7 +9,7 @@ namespace POC_Azure_ReadWriteJSONInAzureStorageMessage
     {
         static void Main(string[] args)
         {
-            string connectionstring = "DefaultEndpointsProtocol=https;AccountName=contosopd;AccountKey=DHdvvNuC9mGn7jrU23Ler4YbIly/stNV5q1oiWzeK2FxYXouTa+u3svPI+BDkzJi1/I1dcnL0gEZyM7ToXUzdQ==;EndpointSuffix=core.windows.net";
+            string connectionstring = "DefaultEndpointsProtocol=https;AccountName=contoso;AccountKey=nL0gEZyM7ToXUzdQ==;EndpointSuffix=core.windows.net";
 
             Console.WriteLine("Hello World! Put your inputs when asked...!");
 
