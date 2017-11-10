@@ -12,7 +12,6 @@ this will do below thing
 
 
 Nuget packages required:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Microsoft.WindowsAzure.Storage
 Newtonsoft.Json
 
