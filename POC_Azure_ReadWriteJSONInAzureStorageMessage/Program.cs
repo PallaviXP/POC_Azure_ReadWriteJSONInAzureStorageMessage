@@ -9,7 +9,7 @@ namespace POC_Azure_ReadWriteJSONInAzureStorageMessage
     {
         static void Main(string[] args)
         {
-            string connectionstring = "DefaultEndpointsProtocol=https;AccountName=contoso;AccountKey=nL0gEZyM7ToXUzdQ==;EndpointSuffix=core.windows.net";
+            string connectionstring = "DefaultEndpointsProtocol=https;AccountName=contoso;AccountKey=eEhA==;EndpointSuffix=core.windows.net";
 
             Console.WriteLine("Hello World! Put your inputs when asked...!");
 
@@ -24,14 +24,16 @@ namespace POC_Azure_ReadWriteJSONInAzureStorageMessage
             var rep = new Repository("myqueue", connectionstring);
             rep.AddMessage(book);
 
-        
-            IEnumerable<CloudQueueMessage> messages = rep.GetMessages(5);
+
+            var rep1 = new Repository("myqueue", connectionstring);
+
+            IEnumerable<CloudQueueMessage> messages = rep1.GetMessages(5);
             foreach (CloudQueueMessage message in messages)
             {
                 string jsonString = message.AsString;
                 Book myMessage = Deserialize<Book>(jsonString, true);
 
-                Console.WriteLine("Book {0}{1}", myMessage.BookName, myMessage.Author);
+                Console.WriteLine("Book : {0}   AUTHOR: {1}", myMessage.BookName, myMessage.Author);
 
             }
 

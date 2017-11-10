@@ -27,7 +27,7 @@ namespace POC_Azure_ReadWriteJSONInAzureStorageMessage
                     batchRetrieveCount = count;
                 IEnumerable<CloudQueueMessage> receivedBatch = _queue.GetMessagesAsync(batchRetrieveCount).Result;
                 retrievedMessages.AddRange(receivedBatch);
-                DeleteBatch(receivedBatch);
+                //DeleteBatch(receivedBatch);
             } while ((count -= batchRetrieveCount) > 0);
             return retrievedMessages;
         }
