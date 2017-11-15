@@ -27,10 +27,10 @@ $queueName = "howtoqueue"
 
 $queue = Get-AzureStorageQueue -name $queueName -Context $ctx
 if(-not $queue){ 
-   $queue = New-AzureStorageQueue –Name $queueName -Context $ctx
+   $queue = New-AzureStorageQueue â€“Name $queueName -Context $ctx
 }
 
-#$queue = New-AzureStorageQueue –Name $queueName -Context $ctx
+#$queue = New-AzureStorageQueue â€“Name $queueName -Context $ctx
 
 #list out all properties of queue
 $queue
@@ -47,5 +47,11 @@ Get-AzureStorageQueue -Context $ctx | select Name
 $queueMessage = New-Object -TypeName Microsoft.WindowsAzure.Storage.Queue.CloudQueueMessage -ArgumentList "This is message 1"
 # Add a new message to the queue
 #$queue.CloudQueue.AddMessage($QueueMessage)
+
+try below--------------------
+$storeAuthContext = New-AzureStorageContext -StorageAccountName '[my storage account name]' -StorageAccountKey '[my storage account key'
+$myQueue = New-AzureStorageQueue â€“Name 'myqueue' -Context $storeAuthContext
+$queueMessage = New-Object -TypeName Microsoft.WindowsAzure.Storage.Queue.CloudQueueMessage -ArgumentList 'Hello'
+$myQueue.CloudQueue.AddMessage($queueMessage)
 
 
